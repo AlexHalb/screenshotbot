@@ -12,6 +12,8 @@ bot.connect({
 	nick: 'ScreenshotBot'
 });
 
+console.log('test');
+
 var urlArray = [];
 bot.on('message', function(event) {
     if (event.nick === bot.nick) return;
