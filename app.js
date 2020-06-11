@@ -12,8 +12,6 @@ bot.connect({
 	nick: 'ScreenshotBot'
 });
 
-console.log('test');
-
 var urlArray = [];
 bot.on('message', function(event) {
     if (event.nick === bot.nick) return;
@@ -71,6 +69,10 @@ bot.on('message', function(event) {
       urlArray.push([link, today, msg.substring(msg.search(/https:\/\/eternagame.org\/sites\/default\/files\/chat_screens\/\d{6}_\d{10}\.png/))]);
     }
 });
+
+bot.on('raw', (e) => {
+  console.log(e.from_server ? e.line : '');
+})
 
 function formatMessage(msg) {
   return `000000_<font color="#FFFFFF">ScreenshotBot</font>_${getDateString()} UTC_${msg}`;
