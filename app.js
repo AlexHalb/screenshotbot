@@ -8,7 +8,7 @@ var bot = new Irc.Client({
 });
 bot.connect({
 	host: 'irc.eternagame.org',
-	port: 6667,
+	port: process.env.PORT,
 	nick: 'ScreenshotBot'
 });
 
