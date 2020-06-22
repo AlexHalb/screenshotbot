@@ -7,7 +7,7 @@ var bot = new Irc.Client({
   version: 'node.js irc-framework',
 });
 bot.connect({
-	host: 'irc.eternagame.org',
+	host: 'wss://irc.eternagame.org/chatws/websocket',
 	port: process.env.PORT || 6667,
 	nick: 'ScreenshotBot'
 });
